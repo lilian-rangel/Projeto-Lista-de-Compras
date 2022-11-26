@@ -5,8 +5,26 @@
     --radius: 0.5rem;
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s linear;
+    --ff-secondary: "Open Sans", sans-serif;
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-grey-1: hsl(209, 61%, 16%);
+
 
 }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-secondary);
+    background: var(--clr-grey-10);
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+  }
 
 .section {
     padding: 5rem 0;
