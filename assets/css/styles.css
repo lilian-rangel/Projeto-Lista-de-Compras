@@ -4,11 +4,12 @@
     --clr-white: #fff;
     --radius: 0.5rem;
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     --transition: all 0.3s linear;
     --ff-secondary: "Open Sans", sans-serif;
     --clr-grey-10: hsl(210, 36%, 96%);
     --clr-grey-1: hsl(209, 61%, 16%);
-
+    --spacing: 0.25rem;
 
 }
 
@@ -44,4 +45,30 @@ body {
     box-shadow: var(--light-shadow);
     transition: var(--transition);
     padding: 2rem;
+}
+
+.section-center:hover {
+    box-shadow: var(--dark-shadow);
+}
+
+.alert {
+    margin-bottom: 1rem;
+    height: 1.25rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 0.7rem;
+    border-radius: 0.25rem;
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+}
+
+.alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+}
+
+.alert-success {
+    color: #155724;
+    background: #f8d7da;
 }
