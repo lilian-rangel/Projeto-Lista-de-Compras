@@ -14,6 +14,8 @@ let editID = "";
 
 /* Eventos */
 form.addEventListener('submit', addItem);
+// clear items
+clearBtn.addEventListener('click', clearItems);
 
 /* Funções */
 function addItem(e) {
@@ -49,8 +51,6 @@ function addItem(e) {
         // set back to default
         setBackToDefault();
 
-
-
     } else if (value && editFlag) {
 
     } else{
@@ -69,6 +69,22 @@ function displayAlert(text,action){
         alert.classList.remove(`alert-${action}`);
     }, 2000);
 }
+
+// clear items
+function clearItems () {
+    const items = document.querySelectorAll(".grocery-item");
+
+    if(items.length > 0) {
+        items.forEach(function(item){
+            list.removeChild(item);
+        });
+    }
+    container.classList.remove("show-container");
+    displayAlert("Lista vazia", "danger");
+    setBackToDefault();
+   // localStorage.removeItem("list");
+}
+
 
 //set back to default
 function setBackToDefault(){
