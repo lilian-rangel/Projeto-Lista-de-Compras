@@ -130,9 +130,20 @@ function setBackToDefault(){
     submitBtn.textContent = "submit";
 }
 
-// LOCAL STORAGE 
-function addToLocalStorage(id,value){
+// ***** LOCAL STORAGE *****
+function addToLocalStorage(id, value){
+    const grocery = { id, value };
+    let items = localStorage.getItem("list")
+    ? JSON.parse(localStorage.getItem("list"))
+    : [];
+    console.log(items);
+
+    items.push(grocery);    
+    localStorage.setItem("list", JSON.stringify(items));
+
     //console.log("Adicionado ao Local Storage");
 }
 function removeFromLocalStorage(id) {}
 function editLocalStorage(id, value) {}
+
+// save as strings 
