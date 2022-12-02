@@ -97,7 +97,7 @@ function editItem(e) {
     grocery.value = editElement.innerHTML;
     editFlag = true;
     editID = element.dataset.id;
-    submitBtn.textContent = "edit";
+    submitBtn.textContent = "editar";
 }
 
 //set back to default
@@ -105,7 +105,7 @@ function setBackToDefault(){
     grocery.value = "";
     editFlag = false;
     editID = "";
-    submitBtn.textContent = "submit";
+    submitBtn.textContent = "enviar";
 }
 
 // ***** LOCAL STORAGE *****
