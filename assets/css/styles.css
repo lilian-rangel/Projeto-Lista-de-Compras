@@ -38,7 +38,7 @@ h3 {
     line-height: 1.25;
     margin-bottom: 0.74rem;
     font-family: var(--ff-primary);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 p {
@@ -148,3 +148,29 @@ p {
     visibility: visible;
 }
 
+.grocery-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+    padding: 0.25rem 1rem;
+    border-radius: var(--radius);
+    text-transform: capitalize;
+}
+
+.grocery-item:hover {
+    color: var(--clr-grey-5);
+    background: var(--clr-grey-10);
+}
+
+.grocery-item:hover .title {
+    color: var(--clr-grey-5);
+}
+
+.title {
+    margin-bottom: 0;
+    color: var(--clr-grey-1);
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
