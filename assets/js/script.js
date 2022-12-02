@@ -105,7 +105,7 @@ function setBackToDefault(){
     grocery.value = "";
     editFlag = false;
     editID = "";
-    submitBtn.textContent = "enviar";
+    submitBtn.textContent = "adicionar";
 }
 
 // ***** LOCAL STORAGE *****
