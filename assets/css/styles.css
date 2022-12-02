@@ -15,6 +15,10 @@
     --clr-grey-1: hsl(209, 61%, 16%);
     --clr-grey-5: hsl(210, 22%, 49%);
     --spacing: 0.25rem;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
 
 }
 
@@ -26,10 +30,12 @@
 
 body {
     font-family: var(--ff-secondary);
-    background: var(--clr-grey-10);
+    background: rgb(223,163,189);
+    background: linear-gradient(240deg, rgba(223,163,189,1) 0%, rgba(168,74,149,1) 22%, rgba(148,187,233,1) 100%);
     color: var(--clr-grey-1);
     line-height: 1.5;
     font-size: 0.875rem;
+    min-height: 100vh;
 }
 
 h3 {
@@ -91,8 +97,8 @@ p {
 
 .alert-success {
     color: #155724;
-    background: #f8d7da;
-}
+    background: #d4edda;
+  }
 
 .form-control {
     display: flex;
@@ -173,4 +179,52 @@ p {
     color: var(--clr-grey-1);
     letter-spacing: 2px;
     transition: var(--transition);
+}
+
+.edit-btn,
+.delete-btn {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin: 0 0.15rem;
+  transition: var(--transition);
+}
+
+.edit-btn {
+  color: var(--clr-green-light);
+}
+
+.edit-btn:hover {
+  color: var(--clr-green-dark);
+}
+
+.delete-btn {
+  color: var(--clr-red-light);
+}
+
+.delete-btn:hover {
+  color: var(--clr-red-dark);
+}
+
+.clear-btn {
+  text-transform: capitalize;
+  width: 10rem;
+  height: 1.5rem;
+  display: grid;
+  align-items: center;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-red-light);
+  margin: 0 auto;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: var(--spacing);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 1.25rem;
+}
+
+.clear-btn:hover {
+  color: var(--clr-red-dark);
 }
